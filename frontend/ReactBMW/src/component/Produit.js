@@ -15,8 +15,6 @@ function Produit(props) {
     try {
       const response = await axios.get('http://localhost:3000/api/produits'); // Modifiez cette URL si nécessaire
       setProduits(response.data);
-      console.log(response.data);
-      
     } catch (error) {
       console.error("Erreur lors de la récupération des produits", error);
     }
@@ -34,7 +32,7 @@ function Produit(props) {
             <img className='img-card' src={produit.img || (produit.modele === 'M3' ? M3 : produit.modele === 'M5' ? M5 : M3Touring)} alt={produit.name} />
           </div>
           <div className='body-card'>
-            <Link to={"/produit/" + response.data[index].id}>
+            <Link to={"/produit/" + produit.modele}>
               <h1 className='produitLien'>{produit.nom}</h1>
             </Link>
             <p>{produit.description}</p>

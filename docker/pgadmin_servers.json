@@ -1,0 +1,10 @@
+[
+    {
+        "Name": "Postgres",
+        "Group": "Servers",
+        "Port": 5432,
+        "Server": "postgres",
+        "Username": "root",
+        "Password": "mypassword"
+    }
+]

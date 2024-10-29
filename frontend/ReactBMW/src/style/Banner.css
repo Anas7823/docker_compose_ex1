@@ -1,0 +1,38 @@
+.banner {
+	background-color: #000000;
+	padding: 3px;
+	color: white;
+	border-bottom: solid 1px #000000;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.logo{
+    height: 50px;
+    padding: 10px;
+}
+
+.ProduitNav{
+	display: flex;
+	padding-left: 80rem;
+}
+
+.elementNav{
+	color: white;
+	padding: 10px;
+}
+
+
+.mode{
+	position: absolute;
+	z-index: 3;
+	margin-top: -3.7rem;
+	right: 10px;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.22);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.1px);
+	-webkit-backdrop-filter: blur(5.1px);
+}

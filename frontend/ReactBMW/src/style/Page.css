@@ -1,0 +1,113 @@
+.contenueProduit{
+    /* border: 1px solid red; */
+    border: 1px solid rgba(0, 0, 0, 0.048);
+    display: flex;
+    margin:  2rem 10% ;
+    background: rgba(184, 183, 183, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.photo{
+    /* border: 1px solid rgb(157, 255, 0); */
+    padding: 5px;   
+    display: block;
+    height: 40%;
+    width: 60%;
+    justify-content: center;
+}
+
+
+.img-principal{
+    height: 400px;
+    width: 580px;
+    border-radius: 20px;
+}
+
+.sous-img{
+    display: flex; 
+    height: 145px;
+    width: 480px;
+}
+
+.petiteImg{
+    margin: 2px;
+    border-radius: 10px;
+}
+.petiteImg :hover{
+    border: 5px black solid;
+}
+
+.info{
+    border: 1px solid rgba(0, 0, 0, 0.048);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: block;
+    width: 40%;
+    right: 0;
+    justify-content: center;
+    padding: 5px;
+}
+
+.etat{
+    background-color: rgba(0, 128, 0, 0.267);
+    color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+}
+
+.etat-r{
+    background-color: rgba(128, 0, 0, 0.267);
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+}
+
+.enStock{
+    float: right;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.pasDeStock{
+    float: right;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.bouton{
+    display: block;
+}
+
+.btn-commande{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    float: right;
+    height: 5rem;
+    width: 10rem;
+    margin-left: 5px;
+}
+
+.btn-devis{
+    background-color: rgb(255, 102, 0);
+    border-radius: 5px;
+    float: right;
+    height: 5rem;
+    width: 10rem;
+}
+
+.description{
+    margin:  2rem 10% ;
+
+}

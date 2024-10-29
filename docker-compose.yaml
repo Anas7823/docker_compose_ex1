@@ -8,6 +8,8 @@ services:
     env_file: ./docker/postgres.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - my_network
 
   pgadmin:
     image: dpage/pgadmin4
@@ -16,8 +18,11 @@ services:
     env_file: ./docker/pgadmin.env
     volumes:
       - pgadmin_data:/var/lib/pgadmin
+      - ./docker/pgadmin_servers.json:/pgadmin/servers.json
     depends_on:
       - postgres
+    networks:
+      - my_network
 
   backend:
     build:
@@ -43,3 +48,6 @@ services:
 volumes:
   postgres_data:
   pgadmin_data:
+
+networks:
+  my_network: {}  # Définition du réseau avec des accolades

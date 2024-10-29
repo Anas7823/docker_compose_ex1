@@ -1,10 +1,13 @@
-[
-    {
+{
+    "Servers": {
+      "1": {
         "Name": "Postgres",
         "Group": "Servers",
         "Port": 5432,
-        "Server": "postgres",
         "Username": "root",
-        "Password": "mypassword"
+        "SSLMode": "prefer",
+        "MaintenanceDB": "test",
+        "Host": "postgres"
+      }
     }
-]
+  }

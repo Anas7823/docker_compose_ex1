@@ -61,6 +61,39 @@ app.get('/api/produits/:id', async (req, res) => {
     }
 });
 
+// Route pour la modification d'un produit
+app.put('/api/produits/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { nom, description, prix, modele, img } = req.body;
+        const result = await client.query('UPDATE produits SET nom=$1, description=$2, prix=$3, modele=$4, img=$5 WHERE id=$6', [nom, description, prix, modele, img, id]);
+        if (result.rowCount > 0) {
+            res.status(200).send('Produit modifié avec succès');
+        } else {
+            res.status(404).send('Produit non trouvé');
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Erreur du serveur');
+    }
+});
+
+// Route pour la suppression d'un produit
+app.delete('/api/produits/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const result = await client.query('DELETE FROM produits WHERE id=$1', [id]);
+        if (result.rowCount > 0) {
+            res.status(200).send('Produit supprimé avec succès');
+        } else {
+            res.status(404).send('Produit non trouvé');
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Erreur du serveur');
+    }
+});
+
 
 // Démarrage du serveur
 app.listen(port, () => {

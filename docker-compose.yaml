@@ -36,6 +36,7 @@ services:
       - postgres
     networks:
       - communique_bdd
+      - front_net
 
   frontend:
     build:
@@ -47,6 +48,8 @@ services:
     env_file: ./docker/frontend.env
     depends_on:
       - backend
+    networks:
+      - front_net
 
 volumes:
   postgres_data:
@@ -55,3 +58,4 @@ volumes:
 networks:
   my_network: {}  # Définition du réseau avec des accolades
   communique_bdd: {}  # Définition du réseau avec des accolades
+  front_net: {}

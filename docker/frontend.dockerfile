@@ -1,5 +1,5 @@
 # Étape 1 : Construire l'application React
-FROM node:14 AS build
+FROM node:18 AS build
 
 # Définir le répertoire de travail
 WORKDIR /usr/src/app
@@ -22,8 +22,8 @@ FROM nginx:alpine
 # Copier les fichiers construits dans le répertoire de Nginx
 COPY --from=build /usr/src/app/build /usr/share/nginx/html
 
-# Exposer le port 80
-EXPOSE 80
+# Exposer le port 8080
+EXPOSE 8080
 
 # Commande par défaut de Nginx
 CMD ["nginx", "-g", "daemon off;"]
